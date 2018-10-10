@@ -1,0 +1,25 @@
+***** INTRODUCCION A JAVASCRIPT *****
+Lesson 1 - Lesson 21
+
+***** INTRODUCCION A ANGULAR *****
+Lesson 22 - 36
+
+
+
+
+
+NOTAS:
+
+1. Instalar bootstrap en angular:
+	>> npm i bootstrap --save
+
+2. Configurar bootstrap en angular:
+	-> Abrir el archivo "angular.json".
+	-> Buscar la propiedad "styles".
+	-> Aumentar el siguiente codigo:
+        "styles": [
+            "src/styles.css",
+            "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        ]
+
+3. Configurar bootstrap en angular:
