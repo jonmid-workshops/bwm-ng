@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { RentalComponent } from './rental.component';
 import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalListItemComponent } from './rental-list-item/rental-list-item.component';
+
+import { RentalService } from './shared/rental.service';
 
 @NgModule({
     declarations: [
@@ -11,7 +14,7 @@ import { RentalListItemComponent } from './rental-list-item/rental-list-item.com
         RentalListItemComponent
     ],
     imports: [
-        // CommonModule,
+        CommonModule,
         // RouterModule.forChild(routes),
         // HttpClientModule,
         // NgPipesModule,
@@ -21,6 +24,6 @@ import { RentalListItemComponent } from './rental-list-item/rental-list-item.com
         // EditableModule,
         // ImageUploadModule
     ],
-    providers: []
+    providers: [RentalService]
 })
 export class RentalModule {}

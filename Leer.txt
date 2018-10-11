@@ -2,7 +2,7 @@
 Lesson 1 - Lesson 21
 
 ***** INTRODUCCION A ANGULAR *****
-Lesson 22 - 36
+Lesson 22 - 40
 
 
 
@@ -23,3 +23,6 @@ NOTAS:
         ]
 
 3. Configurar bootstrap en angular:
+
+>> Observables en Angular
+https://codeangular.org/2018/08/13/observables-en-angular/

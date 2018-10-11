@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { RentalService } from '../shared/rental.service';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+// import { Rental } from './rental.model';
+// import { HttpClient } from '@angular/common/http';
 
-@Component({
-    selector: 'app-rental-list',
-    templateUrl: './rental-list.component.html',
-    styleUrls: ['./rental-list.component.css']
-})
-export class RentalListComponent implements OnInit {
-    // rentals: any[] = [1,2,3,4,5,6,7,8,9,10];
-    /*
-    rentals: any[] = [
+@Injectable()
+export class RentalService {
+
+    private rentals: any[] = [
         {
             id: 1,
             title: 'Central Apartment',
@@ -63,13 +60,43 @@ export class RentalListComponent implements OnInit {
             createdAt: '11/10/2018'
         }
     ];
-    */
 
-    rentals: any[] = [];
-
-    constructor(private rentalService: RentalService) {}
-
-    ngOnInit() {
-        this.rentals = this.rentalService.getRentals();
+    public getRentals(): any[] {
+        const rentalObservable = new Observable();
+        return this.rentals;
     }
+
+    // constructor(private http: HttpClient) {}
+
+    // public getRentalById(rentalId: string): Observable<any> {
+    //     return this.http.get('/api/v1/rentals/' + rentalId);
+    // }
+
+    // public getRentals(): Observable<any> {
+    //     return this.http.get('/api/v1/rentals');
+    // }
+
+    // public getRentalsByCity(city: string): Observable<any> {
+    //     return this.http.get(`/api/v1/rentals?city=${city}`);
+    // }
+
+    // public createRental(rental: Rental): Observable<any> {
+    //     return this.http.post('/api/v1/rentals', rental);
+    // }
+
+    // public getUserRentals(): Observable<any> {
+    //     return this.http.get('/api/v1/rentals/manage');
+    // }
+
+    // public deleteRental(rentalId: string): Observable<any> {
+    //     return this.http.delete(`/api/v1/rentals/${rentalId}`);
+    // }
+
+    // public updateDental(rentalId: string, rentalData: any): Observable<any> {
+    //     return this.http.patch(`/api/v1/rentals/${rentalId}`, rentalData);
+    // }
+
+    // public verifyRentalUser(rentalId: string): Observable<any> {
+    //     return this.http.get(`/api/v1/rentals/${rentalId}/verify-user`);
+    // }
 }
