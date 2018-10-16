@@ -22,7 +22,7 @@ NOTAS:
             "node_modules/bootstrap/dist/css/bootstrap.min.css"
         ]
 
-3. Configurar bootstrap en angular:
+3. 
 
 >> Observables en Angular
 https://codeangular.org/2018/08/13/observables-en-angular/
